@@ -56,6 +56,17 @@ function redirectIfNotLoggedIn() {
   }
 }
 
+(function toggleIfLoggedIn() {
+  if (localStorage.user_id) {
+    $('.logged-out').hide()
+    $('.logged-in').show()
+  } else {
+    $('.logged-out').show()
+    $('.logged-in').hide()
+  }
+})()
+
+
 function redirectIfLoggedIn() {
   if (localStorage.user_id) {
     window.location = '/index.html'
@@ -64,7 +75,27 @@ function redirectIfLoggedIn() {
 
 function setIdRedirect(result) {
   localStorage.user_id = result.id
-  window.location = ``
+  window.location = ' '
+}
+
+$('.logout-button').click((e) => {
+  // e.preventDefault()
+  logOut()
+  // window.reload()
+})
+
+function logOut() {
+  localStorage.removeItem('user_id')
+  fetch(`${AUTH_URL}/logout`, {
+      method: 'GET',
+      credentials: 'include'
+    }).then((res) => {
+      console.log(res.json())
+      // window.location = '/login.html'
+    })
+    .catch((err) => {
+      console.log(err)
+    })
 }
 
 
