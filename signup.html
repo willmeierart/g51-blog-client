@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>AREA 51 | login</title>
+</head>
+
+<body class="auth-body">
+    <nav>
+        <div class="nav-wrapper orange darken-4">
+            <a href="index.html" class="brand-logo center"><i class="material-icons large left">cloud</i>AREA 51<i class="material-icons large  right">cloud</i></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html">BLOG</a></li>
+                <li><a href="badges.html">LINKS</a></li>
+                <li><a href="login.html" class="waves-effect waves-light btn blue">LOG IN </a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="sass.html">BLOG</a></li>
+                <li><a href="badges.html">LINKS</a></li>
+                <li><a href="login.html" class="waves-effect waves-light btn blue ">  LOG IN </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class=""></div>
+
+        <section class="container login-form">
+            <div id="error-modal" class="modal bottom-sheet">
+                <div class="modal-content">
+                    <p class="error-message"></p>
+                </div>
+            </div>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input placeholder="name" id="name" type="text" class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input placeholder="email" id="email" type="email" class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">assignment_ind</i>
+                            <input placeholder="username/email" id="username" type="text" class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock</i>
+                            <input placeholder="password" id="password" type="password" class="validate">
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light btn-success" type="submit" name="action">Login<i class="material-icons left">verified_user</i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+    <script src="scripts/shared.js"></script>
+    <script src="scripts/signup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+body {
+  background: rgb(50, 50, 50);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+a {
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  height: 100%;
+}
+
+.main-bg {
+  background-image: url("https://metrouk2.files.wordpress.com/2015/05/elib_2388430.jpg?w=748&h=578&crop=1");
+  background-repeat: repeat;
+  /*position: absolute;
+    z-index: -1;
+    width:100%;
+    object-fit: cover;
+    opacity: .2;*/
+}
+
+.wrapper {
+  background-color: rgba(30, 30, 30, .95);
+  object-fit: cover;
+}
+
+.header-btn {
+  color: black;
+  font-weight: bold;
+  margin: 1%;
+}
+
+.title {
+  font-family: 'Special Elite', cursive;
+  text-shadow: 0 0 20px darkred;
+}
+
+.title-cloud {
+  /*color:skyblue;*/
+  /*text-shadow: 0 4px 20px  skyblue;*/
+}
+
+
+/*.main-nav, .foota{
+    opacity: .95;
+}*/
+
+.index-login {
+  align-self: center;
+}
+
+.login-form {
+  margin-top: 50px;
+}
+
+.login-help {
+  float: right;
+}
+
+.user-q {
+  margin: 1em;
+}
+
+.auth-body {
+  background-image: url('http://a.abcnews.com/images/US/GTY_area_51_jef_130816_33x16_1600.jpg');
+  background-size: cover;
+}
+
+form {
+  background-color: rgba(200, 80, 20, .9);
+}
+
+i {
+  color: white;
+}
+
+.btn-success {
+  margin: 2em;
+}
+
+.btn-login, .btn-login>i {
+  color: black;
+  font-weight: bold;
+  margin: 1%;
+}
+
+.post-btn {
+  color: black;
+  /*float:center;*/
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 2%;
+  box-shadow: 0 0 5px red;
+}
+
+.blog-content {
+  margin-bottom: 200px;
+}
+
+.blog-post {
+  background-image: url('http://www.echoesofenoch.com/roswellcrashfake..jpg');
+  background-size: cover;
+  box-shadow: 0 0 30px gold;
+  border-radius: 1%;
+  color: rgb(200, 80, 20);
+  padding: 1%;
+  margin: 5%;
+}
+
+.post-title {
+  color: goldenrod;
+  text-shadow: 0 4px 20px red;
+}
+
+.blog-text {
+  background: black;
+  opacity: .9;
+  margin: 1%;
+  padding: 1% 4%;
+  border-radius: 1%;
+}
+
+.post-body-text {
+  color: white;
+}
+
+.blog-post a {
+  color: orange;
+}
+
+.post-comments {
+  margin-left: 10%;
+}
+
+.new-post {
+  height: 75%;
+  background: white;
+  margin: 15%;
+  padding: 2%;
+  box-shadow: 0 0 100px greenyellow;
+  border-radius: 1%;
+  color: rgb(200, 80, 20);
+  margin-bottom: 200px;
+}
