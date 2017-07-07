@@ -35,7 +35,7 @@
                 <div class="blog-content">
                     <script id="blog-content-template" type="text/x-handlebars-template">
                         {{#each posts}}
-                        <div class="blog-post">
+                        <div class="blog-post" data-id="{{user_id}}">
                             <div class="blog-text">
                                 <h1 class="post-title"><strong>{{title}}</strong></h1>
                                 <h4>by <a href="">{{username}} {{#if name}}<small>({{name}})</small>{{/if}}</a></h4>
@@ -47,12 +47,20 @@
                                 <h5>comments:</h5>
                                 {{#each comments}}
                                 <hr/>
-                                <p>
+                                <div class = "each-comment">
                                     <h6><a href="">{{username}} {{#if name}}<small>({{name}})</small>{{/if}}</a></h6>
-                                    {{content}}
-                                </p>
+                                    <hr>
+                                    <p class="comments">
+                                      {{content}}
+                                    </p>
+                                </div>
                                 {{/each}}
-                                <a class="btn-floating btn-small waves-effect waves-light red logged-in" style="margin-bottom:3%;"><i class="material-icons">add</i></a>
+                                <a class="btn-floating btn-small waves-effect waves-light red logged-in new-comment-btn" style="margin-bottom:3%;"><i class="material-icons">add</i></a>
+                                <div class="new-comment">
+                                  <input type="textarea">
+
+
+                                </div>
                             </div>
 
                         </div>

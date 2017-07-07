@@ -1,16 +1,16 @@
 redirectIfNotLoggedIn()
 $(() => {
   $('.new-post').submit((e) => {
-    console.log(document.localStorage.user_id)
+    console.log(localStorage.user_id)
     e.preventDefault()
     const url = `${API_URL}api/v1/posts`
     const title = $('#new-post-title').val()
     const content = $('#new-post-content').val()
-    // const user_id =
+    const user_id = localStorage.user_id
     const postItself = {
-      title,
-      content,
-      user_id
+      title: title,
+      content: content,
+      user_id: user_id
     }
     console.log(postItself)
     fetchPost(url, postItself)
@@ -27,7 +27,7 @@ $(() => {
     autofocus: true,
     autosave: {
       enabled: true,
-      uniqueId: "auto",
+      uniqueId: "default",
       delay: 1000,
     },
     blockStyles: {

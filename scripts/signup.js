@@ -9,8 +9,7 @@ $(() => {
       password
     }
     console.log(user);
-    fetchPost(`${AUTH_URL}/login`, user)
-      // signup(user)
+    fetchPost(`${AUTH_URL}/signup`, user)
       .then(result => {
         setIdRedirect(result)
       }).catch(error => {
@@ -19,8 +18,4 @@ $(() => {
         $('#error-modal').modal('open')
       })
   })
-
-  // function signup(user){
-  //     return $.post(`${AUTH_URL}/signup`, user)
-  // }
 })

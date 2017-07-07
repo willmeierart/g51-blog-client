@@ -66,6 +66,12 @@ function redirectIfNotLoggedIn() {
   }
 })()
 
+function showUserSpecFunc(el){
+  if (localStorage.user_id == el.closest('.blog-post').attr('data-id')){
+    el.show()
+  }
+}
+
 
 function redirectIfLoggedIn() {
   if (localStorage.user_id) {
@@ -91,7 +97,7 @@ function logOut() {
       credentials: 'include'
     }).then((res) => {
       console.log(res.json())
-      // window.location = '/login.html'
+      window.location = '/login.html'
     })
     .catch((err) => {
       console.log(err)
@@ -103,6 +109,6 @@ function getHostURL() {
   if (window.location.host.indexOf('localhost') != -1) {
     return 'http://localhost:3000/';
   } else {
-    return 'https://sticker-mania.herokuapp.com';
+    // return 'https://sticker-mania.herokuapp.com';
   }
 }

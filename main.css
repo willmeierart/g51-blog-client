@@ -137,6 +137,18 @@ i {
 
 .post-comments {
   margin-left: 10%;
+
+}
+
+.each-comment {
+  background-color: white;
+  padding:2%;
+  border-radius: 2px;
+  margin-bottom: 2%;
+}
+
+.comments{
+  
 }
 
 .new-post {
