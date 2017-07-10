@@ -115,8 +115,9 @@ i {
 }
 
 .post-title {
-  color: goldenrod;
-  text-shadow: 0 4px 20px red;
+  color: white;
+  text-shadow: 0 4px 20px limegreen;
+  font-family: 'Special Elite', cursive;
 }
 
 .blog-text {
@@ -135,20 +136,40 @@ i {
   color: orange;
 }
 
+.edit-btn{
+  display: none;
+}
+
 .post-comments {
   margin-left: 10%;
 
 }
 
-.each-comment {
-  background-color: white;
+.each-comment{
+  background-color: darkgrey;
+  color:black;
   padding:2%;
   border-radius: 2px;
   margin-bottom: 2%;
 }
 
+.each-comment a {
+  color: blue;
+}
+
 .comments{
-  
+
+}
+
+.new-comment{
+  width:80%;
+
+  margin-bottom: 5%;
+}
+.new-comment textarea{
+  background:white;
+  margin:2%;
+
 }
 
 .new-post {

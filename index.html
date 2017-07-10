@@ -38,10 +38,11 @@
                         <div class="blog-post" data-id="{{user_id}}">
                             <div class="blog-text">
                                 <h1 class="post-title"><strong>{{title}}</strong></h1>
-                                <h4>by <a href="">{{username}} {{#if name}}<small>({{name}})</small>{{/if}}</a></h4>
-                                <h5><em>{{posted_on}}</em></h5>
+                                <h4>by <a href="">{{email}} {{#if name}}<small>({{name}})</small>{{/if}}</a></h4>
+                                <p><em>{{posted_on}}</em></p>
                                 <hr/>
                                 <p class="post-body-text">{{content}}</p>
+                                <a class="logged-in edit-btn">edit</a>
                             </div>
                             <div class="blog-text post-comments">
                                 <h5>comments:</h5>
@@ -55,9 +56,9 @@
                                     </p>
                                 </div>
                                 {{/each}}
-                                <a class="btn-floating btn-small waves-effect waves-light red logged-in new-comment-btn" style="margin-bottom:3%;"><i class="material-icons">add</i></a>
+                                <a class="btn-floating btn-small waves-effect waves-light left red logged-in new-comment-btn" style="margin: 2%;"><i class="material-icons">add</i></a>
                                 <div class="new-comment">
-                                  <input type="textarea">
+                                  <textarea rows="2" class="new-comment"></textarea>
 
 
                                 </div>
@@ -99,6 +100,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
     <script src="scripts/shared.js"></script>
-    <script src="scripts/blog.js"></script>
+    <script src="scripts/index.js"></script>
   </body>
 </html>

@@ -1,3 +1,8 @@
+$(()=>{
+  showUserSpecFunc($('.edit-btn'))
+})
+
+
 $(".button-collapse").sideNav()
 $('#error-modal').modal({
   dismissible: true, // Modal can be dismissed by clicking outside of the modal
@@ -10,6 +15,7 @@ $('#error-modal').modal({
   }
 })
 
+showUserSpecFunc($('.edit-btn'))
 
 
 const API_URL = getHostURL();
@@ -66,8 +72,13 @@ function redirectIfNotLoggedIn() {
   }
 })()
 
+showUserSpecFunc($('.edit-btn'))
+
 function showUserSpecFunc(el){
+  console.log(el);
+  console.log(el.closest('.blog-post').attr('data-id'))
   if (localStorage.user_id == el.closest('.blog-post').attr('data-id')){
+    console.log(true)
     el.show()
   }
 }
