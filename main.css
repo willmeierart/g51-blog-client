@@ -136,8 +136,12 @@ i {
   color: orange;
 }
 
-.edit-btn{
-  display: none;
+.edit-btn, .delete-btn{
+  /*display: none;*/
+  margin: 0 .5em;
+  color: royalblue;
+  cursor: pointer;
+
 }
 
 .post-comments {

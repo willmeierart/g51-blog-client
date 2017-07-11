@@ -1,6 +1,3 @@
-$(()=>{
-  showUserSpecFunc($('.edit-btn'))
-})
 
 
 $(".button-collapse").sideNav()
@@ -15,7 +12,6 @@ $('#error-modal').modal({
   }
 })
 
-showUserSpecFunc($('.edit-btn'))
 
 
 const API_URL = getHostURL();
@@ -44,22 +40,22 @@ function fetchPost(url, req) {
 
 function makePostReq(req) {
   return fetch(req).then(confirmation)
-
-  function confirmation(res) {
-    return res.json().then((json) => {
-      if (res.status != 200) {
-        throw json
-      } else {
-        return json
-      }
-    })
-  }
 }
 
 function redirectIfNotLoggedIn() {
   if (!localStorage.user_id) {
     window.location = '/login.html'
   }
+}
+
+function confirmation(res) {
+  return res.json().then((json) => {
+    if (res.status != 200) {
+      throw json
+    } else {
+      return json
+    }
+  })
 }
 
 (function toggleIfLoggedIn() {
@@ -71,17 +67,6 @@ function redirectIfNotLoggedIn() {
     $('.logged-in').hide()
   }
 })()
-
-showUserSpecFunc($('.edit-btn'))
-
-function showUserSpecFunc(el){
-  console.log(el);
-  console.log(el.closest('.blog-post').attr('data-id'))
-  if (localStorage.user_id == el.closest('.blog-post').attr('data-id')){
-    console.log(true)
-    el.show()
-  }
-}
 
 
 function redirectIfLoggedIn() {
@@ -121,5 +106,23 @@ function getHostURL() {
     return 'http://localhost:3000/';
   } else {
     return 'https://area51blog.space';
+  }
+}
+
+function showUserSpecEl(el){
+  el.hide()
+  console.log(el);
+  // el.attr('data-u', localStorage.user_id).show()
+  if (localStorage.user_id == el.attr('data-u')){
+  //   // console.log(el.attr('data-u'));
+  //   $(this)
+    el.show()
+  }
+}
+
+function showAdminEl(el){
+  el.hide()
+  if (localStorage.user_id == 1){
+    el.show()
   }
 }

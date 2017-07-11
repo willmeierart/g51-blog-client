@@ -11,6 +11,8 @@ $(() => {
   function getAllBlogPosts(request) {
     fetch(request)
       .then(returnPosts)
+      .then(()=>{
+      })
       .catch(throwError)
   }
 
@@ -20,7 +22,12 @@ $(() => {
       let sortedPosts = posts.sort((a,b)=>{
         return b.id - a.id
       })
-      showBlogPosts(sortedPosts)
+      return showBlogPosts(sortedPosts)
+    }).then(()=>{
+      showUserSpecEl($('.edit-btn'))
+      showUserSpecEl($('.delete-btn'))
+      showAdminEl($('.delete-btn'))
+      deletePost()
     })
   }
 
@@ -36,6 +43,35 @@ $(() => {
     })
     $('.blog-content').html(html)
   }
+
+  function deletePost(){
+    $('.delete-btn').click((e)=>{
+      const id = e.target.getAttribute('data-p')
+      console.log(id);
+      return fetchDelete(id)
+
+    })
+  }
+
+  function fetchDelete(id){
+    const url = `http://localhost:3000/api/v1/posts/${id}`
+    const request = new Request(url, {
+      method: 'DELETE',
+      mode: 'cors',
+      credentials: 'include'
+    })
+    return deleteThat(request)
+    function deleteThat(request){
+      return fetch(request).then((res)=>{
+        console.log(res.json());
+        // window.location.href = ''
+      }).catch(throwError)
+    }
+  }
+
+
+
+
 
   // var editPostMDE = new SimpleMDE({
   //   element: $('#new-post')[0],

@@ -35,14 +35,15 @@
                 <div class="blog-content">
                     <script id="blog-content-template" type="text/x-handlebars-template">
                         {{#each posts}}
-                        <div class="blog-post" data-id="{{user_id}}">
+                        <div class="blog-post" data-u="{{user_id}}" data-p="{{id}}">
                             <div class="blog-text">
                                 <h1 class="post-title"><strong>{{title}}</strong></h1>
                                 <h4>by <a href="">{{email}} {{#if name}}<small>({{name}})</small>{{/if}}</a></h4>
                                 <p><em>{{posted_on}}</em></p>
                                 <hr/>
                                 <p class="post-body-text">{{content}}</p>
-                                <a class="logged-in edit-btn">edit</a>
+                                <btn class="logged-in edit-btn" data-u="{{user_id}}" data-p="{{id}}">edit</btn>
+                                <span><btn class="logged-in delete-btn" data-u="{{user_id}}" data-p="{{id}}">delete</btn></span>
                             </div>
                             <div class="blog-text post-comments">
                                 <h5>comments:</h5>
